@@ -1,0 +1,25 @@
+<div class="p-5 flex justify-content-center align-items-center">
+  <div class="border-1 surface-border surface-card border-round py-7 px-4 md:px-7 z-1">
+		<form autocomplete="off">
+			<div class="mb-4">
+				<div class="text-900 text-xl font-bold mb-2">Log in</div>
+				<span class="text-600 font-medium">Please enter your credentials</span>
+			</div>
+			<div class="flex flex-column">
+				<span class="p-input-icon-left w-full mb-4">
+					<p-iconField iconPosition="left">
+						<p-inputIcon styleClass="pi pi-search" />
+						<input type="text" pInputText placeholder="Username" autocomplete="off" />
+					</p-iconField>
+				</span>
+				<span class="p-input-icon-left w-full mb-4">
+					<p-iconField iconPosition="left">
+						<p-inputIcon styleClass="pi pi-search" />
+						<input type="password" pInputText placeholder="Password" autocomplete="off"/>
+					</p-iconField>
+				</span>
+				<p-button label="Submit" (click)="add()" />
+			</div>
+		</form>
+  </div>
+</div>

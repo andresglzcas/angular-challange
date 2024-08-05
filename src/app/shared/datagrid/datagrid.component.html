@@ -1,0 +1,38 @@
+<p-table [columns]="cols" [value]="data" styleClass="p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+
+	<ng-template pTemplate="header" let-columns>
+		<tr>
+			<th *ngFor="let col of columns">
+				{{ col.header }}
+			</th>
+			<th></th>
+		</tr>
+	</ng-template>
+	<ng-template pTemplate="body" let-rowData let-columns="columns">
+		<tr>
+			<td *ngFor="let col of columns">
+				{{ rowData[col.field] }}
+			</td>
+			<td class="flex align-items-center justify-content-center">
+				<button class="mx-2" type="button" pButton pRipple icon="pi pi-pencil" (click)="editFcn(rowData)">
+				</button>
+
+				<button class="mx-2"type="button" pButton pRipple icon="pi pi-trash" (click)="deleteFcn(rowData)">
+				</button>
+			</td>
+		</tr>
+	</ng-template>
+
+	<ng-template pTemplate="emptymessage">
+		<tr>
+			<td colspan="5">
+				<div class="p-6 flex align-items-center justify-content-center">
+					<strong>Empty data</strong>
+				</div>
+			</td>
+		</tr>
+
+
+
+	</ng-template>
+</p-table>

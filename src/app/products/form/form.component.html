@@ -1,0 +1,33 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit(productForm)">
+    <div class="flex flex-column">
+        <div class="flex flex-column gap-2 my-2">
+            <label for="firstname">Name</label>
+            <input 
+                pInputText 
+                id="name" 
+                formControlName="name"
+                />
+        </div>
+        <div class="flex flex-column gap-2 my-2">
+            <label for="category">Category</label>
+            <input 
+                pInputText 
+                id="category" 
+                formControlName="category"
+                />
+                
+        </div>
+        <div class="flex flex-column gap-2 my-2">
+            <label for="quantity">Quantity</label>
+            <input 
+                pInputText 
+                id="quantity" 
+                formControlName="quantity"
+                />
+        </div>
+    <br>
+        <p-button type="submit" label="Submit" />
+    </div>
+  
+</form>
+

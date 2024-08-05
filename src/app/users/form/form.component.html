@@ -1,0 +1,32 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
+    <div class="flex flex-column">
+        <div class="flex flex-column gap-2 my-2">
+            <label for="firstname">Firstname</label>
+            <input 
+                pInputText 
+                id="firstname" 
+                formControlName="firstname"
+                />
+        </div>
+        <div class="flex flex-column gap-2 my-2">
+            <label for="lastname">Lastname</label>
+            <input 
+                pInputText 
+                id="lastname" 
+                formControlName="lastname"
+                />
+        </div>
+        <div class="flex flex-column gap-2 my-2">
+            <label for="age">Age</label>
+            <input 
+                pInputText 
+                id="age" 
+                formControlName="age"
+                />
+        </div>
+    <br>
+        <p-button type="submit" label="Submit" />
+    </div>
+  
+</form>
+
